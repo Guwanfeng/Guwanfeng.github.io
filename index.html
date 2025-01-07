@@ -12,25 +12,50 @@
 	  
    <thead>
     <tr>
-     <th>攻击力</th>
-      <th>法强</th>
+     <th></th>
+     <th>生命值</th><th>攻击力</th><th>法术<br>强度</th><th>护甲</th><th>法抗</th><th>吸血</th><th>攻速</th>
+	 <th>暴击<br>率</th><th>暴击<br>伤害</th>
+	 <th>常驻<br>增伤</th><th>敌方<br>残血<br>增伤</th><th>我方<br>残血<br>增伤</th>
     </tr>
    </thead>
 	  
   <tbody>
     <tr>
-      <td>英雄1</td>
-      <td><input type="text" style="width":50px></td>
-      <td><input type="text" style="width":50px></td>
+		<td>英雄1</td>
+		<td><input name="英雄1生命值" type="text" style="width:50px"></td>
+		<td><input name="英雄1攻击力" type="text" style="width:50px"></td>
+		<td><input name="英雄1法术强度" type="text" style="width:50px"></td>
+		<td><input name="英雄1护甲" type="text" style="width:50px"></td>
+		<td><input name="英雄1法抗" type="text" style="width:50px"></td>
+		<td><input name="英雄1吸血" type="text" style="width:50px"></td>
+		<td><input name="英雄1攻速" type="text" style="width:50px"></td>
+		<td><input name="英雄1暴击率" type="text" style="width:50px"></td>
+		<td><input name="英雄1暴击伤害" type="text" style="width:50px"></td>
+		<td><input name="英雄1常驻增伤" type="text" style="width:50px"></td>
+		<td><input name="英雄1敌方残血增伤" type="text" style="width:50px"></td>
+		<td><input name="英雄1我方残血增伤" type="text" style="width:50px"></td>
     </tr>
     <tr>
-      <td>英雄2</td>
-      <td><input type="text" style="width":50px></td>
-      <td><input type="text" style="width":50px></td>
+		<td>英雄2</td>
+		<td><input name="英雄2生命值" type="text" style="width:50px"></td>
+		<td><input name="英雄2攻击力" type="text" style="width:50px"></td>
+		<td><input name="英雄2法术强度" type="text" style="width:50px"></td>
+		<td><input name="英雄2护甲" type="text" style="width:50px"></td>
+		<td><input name="英雄2法抗" type="text" style="width:50px"></td>
+		<td><input name="英雄2吸血" type="text" style="width:50px"></td>
+		<td><input name="英雄2攻速" type="text" style="width:50px"></td>
+		<td><input name="英雄2暴击率" type="text" style="width:50px"></td>
+		<td><input name="英雄2暴击伤害" type="text" style="width:50px"></td>
+		<td><input name="英雄2常驻增伤" type="text" style="width:50px"></td>
+		<td><input name="英雄2敌方残血增伤" type="text" style="width:50px"></td>
+		<td><input name="英雄2我方残血增伤" type="text" style="width:50px"></td>
     </tr>
   </tbody>	  
 </table>
-<input type="button" value="确定" @click="confirmBoard">
+<input type="button" value="赛博斗蛐蛐" @click="calc" style="height:40px">
+	<p>1.英雄1的减伤可以通过对英雄2添加一个负的常驻增伤实现</p>
+	<p>2.连弩类道具填写2暴击伤害即可</p>
+	
 </body>
 
 </html>
