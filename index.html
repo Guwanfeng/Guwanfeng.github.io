@@ -59,7 +59,7 @@
 		function calc(){
 			let 英雄1生命值 = document.getElementById("00")
 			let 英雄2生命值 = document.getElementById("000")
-			let result = document.getElementById("result")
+			let 结果 = document.getElementById("result")
 			let val英雄1生命值 = parseInt(英雄1生命值.value)
 			let val英雄2生命值 = parseInt(英雄2生命值.value)
 			result.innerText = val英雄1生命值+val英雄2生命值
@@ -67,9 +67,7 @@
 	</script>
 	<p>1.英雄1的减伤可以通过对英雄2添加一个负的常驻增伤实现</p>
 	<p>2.连弩类道具填写2暴击伤害即可</p><br><br><br>
-	<span>
-		英雄1花费了5s获胜，剩余血量500
-		<br>id="result" 
+	<span id="result" ><br>英雄1花费了5s获胜，剩余血量500
 	</span>
 </body>
 
