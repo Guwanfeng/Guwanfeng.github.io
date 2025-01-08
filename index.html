@@ -1,74 +1,198 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>300英雄Solo</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>300英雄赛博斗蛐蛐</title>
 </head>
 	
 <body>
-  <a href="https://space.bilibili.com/383581308" target="_blank">Bilibili 狂三中包F7</a>
-  <table>
-	  
-   <thead>
-    <tr>
-     <th></th>
-     <th>生命值</th><th>攻击力</th><th>法术<br>强度</th><th>抗性</th><th>固定<br>穿透</th><th>百分比<br>穿透</th><th>吸血</th><th>攻速</th>
-	 <th>暴击率</th><th>暴击<br>伤害</th>
-	 <th>常驻<br>增伤</th><th>敌方<br>残血<br>增伤</th><th>我方<br>残血<br>增伤</th>
-    </tr>
-   </thead>
-	  
-  <tbody>
-    <tr>
-		<td>英雄1</td>
-		<td><input name="英雄1生命值"  id=00 type="text" style="width:50px"></td>
-		<td><input name="英雄1攻击力" id=01 type="text" style="width:50px"></td>
-		<td><input name="英雄1法术强度" id=02 type="text" style="width:50px"></td>
-		<td><input name="英雄1抗性" id=03 type="text" style="width:50px"></td>
-		<td><input name="英雄1固定穿透" id=04 type="text" style="width:50px"></td>
-		<td><input name="英雄1百分比穿透" id=05 type="text" style="width:50px"></td>
-		<td><input name="英雄1吸血" id=06 type="text" style="width:50px"></td>
-		<td><input name="英雄1攻速" id=07 type="text" style="width:50px"></td>
-		<td><input name="英雄1暴击率" id=08 type="text" style="width:50px"></td>
-		<td><input name="英雄1暴击伤害" id=09 type="text" style="width:50px"></td>
-		<td><input name="英雄1常驻增伤" id=10 type="text" style="width:50px"></td>
-		<td><input name="英雄1敌方残血增伤" id=11 type="text" style="width:50px"></td>
-		<td><input name="英雄1我方残血增伤" id=12 type="text" style="width:50px"></td>
-    </tr>
-    <tr>
-		<td>英雄2</td>
-		<td><input name="英雄2生命值" id=000 type="text" style="width:50px"></td>
-		<td><input name="英雄2攻击力" id=001 type="text" style="width:50px"></td>
-		<td><input name="英雄2法术强度" id=002type="text" style="width:50px"></td>
-		<td><input name="英雄2抗性" id=003 type="text" style="width:50px"></td>
-		<td><input name="英雄2固定穿透" id=004 type="text" style="width:50px"></td>
-		<td><input name="英雄2百分比穿透" id=005 type="text" style="width:50px"></td>
-		<td><input name="英雄2吸血" id=006 type="text" style="width:50px"></td>
-		<td><input name="英雄2攻速" id=007 type="text" style="width:50px"></td>
-		<td><input name="英雄2暴击率" id=008 type="text" style="width:50px"></td>
-		<td><input name="英雄2暴击伤害" id=009 type="text" style="width:50px"></td>
-		<td><input name="英雄2常驻增伤" id=010 type="text" style="width:50px"></td>
-		<td><input name="英雄2敌方残血增伤" id=011 type="text" style="width:50px"></td>
-		<td><input name="英雄2我方残血增伤" id=012 type="text" style="width:50px"></td>
-    </tr>
-  </tbody>	  
-</table>
-<input type="button" value="赛博斗蛐蛐" onclick="calc()" style="height:40px">
+	<a href="https://space.bilibili.com/383581308" target="_blank">Bilibili 狂三中包F7</a>
+	<table>
+		<thead>
+		<tr>
+		<th></th>
+		<th>生命值</th><th>攻击力</th><th>法术<br>强度</th><th>抗性</th><th>固定<br>穿透</th><th>百分比<br>穿透</th><th>护盾值</th><th>常驻<br>增伤</th><th>敌方<br>残血<br>增伤</th><th>我方<br>残血<br>增伤</th><th>生命<br>偷取</th><th>血族<br>吸血</th><th>生命<br>回复</th><th>攻击<br>速度</th><th>暴击率</th><th>暴击<br>伤害</th><th>三项</th><th>破刃</th><th>斩舰</th><th>削蓝</th><th>妖精</th><th>凤凰</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>英雄1数值</td>
+		<td><input id=英雄1生命值 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1攻击力 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1法术强度 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1抗性 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1固定穿透 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1百分比穿透 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1护盾值 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1常驻增伤 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1敌方残血增伤 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1我方残血增伤 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1生命偷取 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1血族吸血 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1生命回复 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1攻击速度 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1暴击率 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1暴击伤害 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1三项 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1破刃 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1斩舰 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1削蓝 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1妖精 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄1凤凰 type="number" style="width:50px" value="0"></td>
+		</tr>
+		<tr>
+		<td>英雄2数值</td>
+		<td><input id=英雄2生命值 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2攻击力 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2法术强度 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2抗性 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2固定穿透 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2百分比穿透 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2护盾值 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2常驻增伤 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2敌方残血增伤 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2我方残血增伤 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2生命偷取 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2血族吸血 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2生命回复 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2攻击速度 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2暴击率 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2暴击伤害 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2三项 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2破刃 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2斩舰 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2削蓝 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2妖精 type="number" style="width:50px" value="0"></td>
+		<td><input id=英雄2凤凰 type="number" style="width:50px" value="0"></td>
+		</tr>
+		</tbody>	  
+	</table>
+	<table>
+		<thead>
+			<tr>
+			<th></th><th>R1技能</th><th>R2技能</th><th>R3技能</th><th>技能1</th><th>技能2</th><th>技能3</th><th>技能4</th><th>技能5</th><th>技能6</th><th>技能7</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<td>英雄1伤害</td>
+			<td><input id=英雄1R1技能 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1R2技能 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1R3技能 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能1 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能2 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能3 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能4 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能5 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能6 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能7 type="number" style="width:50px" value="0"></td>
+			</tr>
+			<tr>
+			<td>英雄1冷却</td>
+			<td><input id=英雄1R1技能冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1R2技能冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1R3技能冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能1冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能2冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能3冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能4冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能5冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能6冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄1技能7冷却 type="number" style="width:50px" value="0"></td>
+			</tr>
+			<tr>
+			<td>英雄2伤害</td>
+			<td><input id=英雄2R1技能 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2R2技能 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2R3技能 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能1 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能2 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能3 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能4 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能5 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能6 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能7 type="number" style="width:50px" value="0"></td>
+			</tr>
+			<tr>
+			<td>英雄2冷却</td>
+			<td><input id=英雄2R1技能冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2R2技能冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2R3技能冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能1冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能2冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能3冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能4冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能5冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能6冷却 type="number" style="width:50px" value="0"></td>
+			<td><input id=英雄2技能7冷却 type="number" style="width:50px" value="0"></td>
+			</tr>
+		</tbody>
+	</table>
+<button onclick="Calculate()" style="height:40px">斗蛐</button>
 	<script>
-		function calc(){
-			let 英雄1生命值 = document.getElementById("00")
-			let 英雄2生命值 = document.getElementById("000")
-			let 结果 = document.getElementById("result")
-			let val英雄1生命值 = parseInt(英雄1生命值.value)
-			let val英雄2生命值 = parseInt(英雄2生命值.value)
-			result.innerText = val英雄1生命值+val英雄2生命值
+		function Calculate(){
+			let 英雄1生命值 = parseFloat(document.getElementById("英雄1生命值").value);
+			let 英雄1攻击力 = parseFloat(document.getElementById("英雄1攻击力").value);
+			let 英雄1法术强度 = parseFloat(document.getElementById("英雄1法术强度").value);
+			let 英雄1抗性 = parseFloat(document.getElementById("英雄1抗性").value);
+			let 英雄1固定穿透 = parseFloat(document.getElementById("英雄1固定穿透").value);
+			let 英雄1百分比穿透 = parseFloat(document.getElementById("英雄1百分比穿透").value);
+			let 英雄1护盾值 = parseFloat(document.getElementById("英雄1护盾值").value);
+			let 英雄1常驻增伤 = parseFloat(document.getElementById("英雄1常驻增伤").value);
+			let 英雄1敌方残血增伤 = parseFloat(document.getElementById("英雄1敌方残血增伤").value);
+			let 英雄1我方残血增伤 = parseFloat(document.getElementById("英雄1我方残血增伤").value);
+			let 英雄1生命偷取 = parseFloat(document.getElementById("英雄1生命偷取").value);
+			let 英雄1血族吸血 = parseFloat(document.getElementById("英雄1血族吸血").value);
+			let 英雄1生命回复 = parseFloat(document.getElementById("英雄1生命回复").value);
+			let 英雄1攻击速度 = parseFloat(document.getElementById("英雄1攻击速度").value);
+			let 英雄1暴击率 = parseFloat(document.getElementById("英雄1暴击率").value);
+			let 英雄1暴击伤害 = parseFloat(document.getElementById("英雄1暴击伤害").value);
+			let 英雄1三项 = parseFloat(document.getElementById("英雄1三项").value);
+			let 英雄1破刃 = parseFloat(document.getElementById("英雄1破刃").value);
+			let 英雄1斩舰= parseFloat(document.getElementById("英雄1斩舰").value);
+			let 英雄1削蓝 = parseFloat(document.getElementById("英雄1削蓝").value);
+			let 英雄1妖精 = parseFloat(document.getElementById("英雄1妖精").value);
+			let 英雄1凤凰 = parseFloat(document.getElementById("英雄1凤凰").value);
+			let 英雄2生命值 = parseFloat(document.getElementById("英雄2生命值").value);
+			let 英雄2攻击力 = parseFloat(document.getElementById("英雄2攻击力").value);
+			let 英雄2法术强度 = parseFloat(document.getElementById("英雄2法术强度").value);
+			let 英雄2抗性 = parseFloat(document.getElementById("英雄2抗性").value);
+			let 英雄2固定穿透 = parseFloat(document.getElementById("英雄2固定穿透").value);
+			let 英雄2百分比穿透 = parseFloat(document.getElementById("英雄2百分比穿透").value);
+			let 英雄2护盾值 = parseFloat(document.getElementById("英雄2护盾值").value);
+			let 英雄2常驻增伤 = parseFloat(document.getElementById("英雄2常驻增伤").value);
+			let 英雄2敌方残血增伤 = parseFloat(document.getElementById("英雄2敌方残血增伤").value);
+			let 英雄2我方残血增伤 = parseFloat(document.getElementById("英雄2我方残血增伤").value);
+			let 英雄2生命偷取 = parseFloat(document.getElementById("英雄2生命偷取").value);
+			let 英雄2血族吸血 = parseFloat(document.getElementById("英雄2血族吸血").value);
+			let 英雄2生命回复 = parseFloat(document.getElementById("英雄2生命回复").value);
+			let 英雄2攻击速度 = parseFloat(document.getElementById("英雄2攻击速度").value);
+			let 英雄2暴击率 = parseFloat(document.getElementById("英雄2暴击率").value);
+			let 英雄2暴击伤害 = parseFloat(document.getElementById("英雄2暴击伤害").value);
+			let 英雄2三项 = parseFloat(document.getElementById("英雄2三项").value);
+			let 英雄2破刃 = parseFloat(document.getElementById("英雄2破刃").value);
+			let 英雄2斩舰= parseFloat(document.getElementById("英雄2斩舰").value);
+			let 英雄2削蓝 = parseFloat(document.getElementById("英雄2削蓝").value);
+			let 英雄2妖精 = parseFloat(document.getElementById("英雄2妖精").value);
+			let 英雄2凤凰 = parseFloat(document.getElementById("英雄2凤凰").value);
+			let result = 英雄1生命值+英雄2生命值;
+			let 英雄1暴击乘区 = 1-英雄1暴击率+英雄1暴击率*英雄1暴击伤害
+			let 英雄2暴击乘区 = 1-英雄2暴击率+英雄2暴击率*英雄2暴击伤害
+			let 英雄1实际抗性 =(英雄1抗性-英雄2固定穿透)*(1-英雄2百分比穿透)
+			let 英雄2实际抗性 =(英雄2抗性-英雄1固定穿透)*(1-英雄1百分比穿透)
+			let 英雄1承伤比率 = 100/(100+英雄1实际抗性)
+			let 英雄2承伤比率 = 100/(100+英雄2实际抗性)
+			let 英雄1普攻伤害 = 英雄1攻击力*英雄1暴击乘区*英雄2承伤比率*(1+英雄1常驻增伤)
+			let 英雄2普攻伤害 = 英雄2攻击力*英雄2暴击乘区*英雄1承伤比率*(1+英雄1常驻增伤)
+			document.getElementById("result").innerHTML= 
+                  `英雄1生命值+英雄2生命值：${result}<br>英雄2普攻伤害：${英雄2普攻伤害}`;
 		}
 	</script>
 	<p>1.英雄1的减伤可以通过对英雄2添加一个负的常驻增伤实现</p>
 	<p>2.连弩类道具填写2暴击伤害即可</p><br><br><br>
-	<span id="result" ><br>英雄1花费了5s获胜，剩余血量500
-	</span>
+	<span id="result"></span>
+	
 </body>
 
 </html>
