@@ -1,200 +1,328 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>300英雄赛博斗蛐蛐</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>300英雄 · 装备属性计算器</title>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-	
 <body>
-	<a href="https://space.bilibili.com/383581308" target="_blank">Bilibili 狂三中包F7</a>
-	<table>
-		<thead>
-		<tr>
-		<th></th>
-		<th>生命值</th><th>攻击力</th><th>法术<br>强度</th><th>抗性</th><th>固定<br>穿透</th><th>百分比<br>穿透</th><th>护盾值</th><th>常驻<br>增伤</th><th>敌方<br>残血<br>增伤</th><th>我方<br>残血<br>增伤</th><th>生命<br>偷取</th><th>血族<br>吸血</th><th>生命<br>回复</th><th>攻击<br>速度</th><th>暴击率</th><th>暴击<br>伤害</th><th>三项</th><th>破刃</th><th>斩舰</th><th>削蓝</th><th>妖精</th><th>凤凰</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-		<td>英雄1数值</td>
-		<td><input id=英雄1生命值 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1攻击力 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1法术强度 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1抗性 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1固定穿透 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1百分比穿透 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1护盾值 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1常驻增伤 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1敌方残血增伤 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1我方残血增伤 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1生命偷取 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1血族吸血 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1生命回复 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1攻击速度 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1暴击率 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1暴击伤害 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1三项 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1破刃 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1斩舰 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1削蓝 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1妖精 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄1凤凰 type="number" style="width:50px" value="0"></td>
-		</tr>
-		<tr>
-		<td>英雄2数值</td>
-		<td><input id=英雄2生命值 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2攻击力 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2法术强度 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2抗性 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2固定穿透 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2百分比穿透 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2护盾值 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2常驻增伤 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2敌方残血增伤 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2我方残血增伤 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2生命偷取 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2血族吸血 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2生命回复 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2攻击速度 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2暴击率 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2暴击伤害 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2三项 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2破刃 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2斩舰 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2削蓝 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2妖精 type="number" style="width:50px" value="0"></td>
-		<td><input id=英雄2凤凰 type="number" style="width:50px" value="0"></td>
-		</tr>
-		</tbody>	  
-	</table>
-	<table>
-		<thead>
-			<tr>
-			<th></th><th>R1技能</th><th>R2技能</th><th>R3技能</th><th>技能1</th><th>技能2</th><th>技能3</th><th>技能4</th><th>技能5</th><th>技能6</th><th>技能7</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-			<td>英雄1伤害</td>
-			<td><input id=英雄1R1技能 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1R2技能 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1R3技能 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能1 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能2 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能3 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能4 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能5 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能6 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能7 type="number" style="width:50px" value="0"></td>
-			</tr>
-			<tr>
-			<td>英雄1冷却</td>
-			<td><input id=英雄1R1技能冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1R2技能冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1R3技能冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能1冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能2冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能3冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能4冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能5冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能6冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄1技能7冷却 type="number" style="width:50px" value="0"></td>
-			</tr>
-			<tr>
-			<td>英雄2伤害</td>
-			<td><input id=英雄2R1技能 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2R2技能 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2R3技能 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能1 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能2 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能3 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能4 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能5 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能6 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能7 type="number" style="width:50px" value="0"></td>
-			</tr>
-			<tr>
-			<td>英雄2冷却</td>
-			<td><input id=英雄2R1技能冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2R2技能冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2R3技能冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能1冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能2冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能3冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能4冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能5冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能6冷却 type="number" style="width:50px" value="0"></td>
-			<td><input id=英雄2技能7冷却 type="number" style="width:50px" value="0"></td>
-			</tr>
-		</tbody>
-	</table>
-<button onclick="Calculate()" style="height:40px">斗蛐</button>
-	<script>
-		function Calculate(){
-			let 英雄1生命值 = parseFloat(document.getElementById("英雄1生命值").value);
-			let 英雄1攻击力 = parseFloat(document.getElementById("英雄1攻击力").value);
-			let 英雄1法术强度 = parseFloat(document.getElementById("英雄1法术强度").value);
-			let 英雄1抗性 = parseFloat(document.getElementById("英雄1抗性").value);
-			let 英雄1固定穿透 = parseFloat(document.getElementById("英雄1固定穿透").value);
-			let 英雄1百分比穿透 = parseFloat(document.getElementById("英雄1百分比穿透").value);
-			let 英雄1护盾值 = parseFloat(document.getElementById("英雄1护盾值").value);
-			let 英雄1常驻增伤 = parseFloat(document.getElementById("英雄1常驻增伤").value);
-			let 英雄1敌方残血增伤 = parseFloat(document.getElementById("英雄1敌方残血增伤").value);
-			let 英雄1我方残血增伤 = parseFloat(document.getElementById("英雄1我方残血增伤").value);
-			let 英雄1生命偷取 = parseFloat(document.getElementById("英雄1生命偷取").value);
-			let 英雄1血族吸血 = parseFloat(document.getElementById("英雄1血族吸血").value);
-			let 英雄1生命回复 = parseFloat(document.getElementById("英雄1生命回复").value);
-			let 英雄1攻击速度 = parseFloat(document.getElementById("英雄1攻击速度").value);
-			let 英雄1暴击率 = parseFloat(document.getElementById("英雄1暴击率").value);
-			let 英雄1暴击伤害 = parseFloat(document.getElementById("英雄1暴击伤害").value);
-			let 英雄1三项 = parseFloat(document.getElementById("英雄1三项").value);
-			let 英雄1破刃 = parseFloat(document.getElementById("英雄1破刃").value);
-			let 英雄1斩舰= parseFloat(document.getElementById("英雄1斩舰").value);
-			let 英雄1削蓝 = parseFloat(document.getElementById("英雄1削蓝").value);
-			let 英雄1妖精 = parseFloat(document.getElementById("英雄1妖精").value);
-			let 英雄1凤凰 = parseFloat(document.getElementById("英雄1凤凰").value);
-			let 英雄2生命值 = parseFloat(document.getElementById("英雄2生命值").value);
-			let 英雄2攻击力 = parseFloat(document.getElementById("英雄2攻击力").value);
-			let 英雄2法术强度 = parseFloat(document.getElementById("英雄2法术强度").value);
-			let 英雄2抗性 = parseFloat(document.getElementById("英雄2抗性").value);
-			let 英雄2固定穿透 = parseFloat(document.getElementById("英雄2固定穿透").value);
-			let 英雄2百分比穿透 = parseFloat(document.getElementById("英雄2百分比穿透").value);
-			let 英雄2护盾值 = parseFloat(document.getElementById("英雄2护盾值").value);
-			let 英雄2常驻增伤 = parseFloat(document.getElementById("英雄2常驻增伤").value);
-			let 英雄2敌方残血增伤 = parseFloat(document.getElementById("英雄2敌方残血增伤").value);
-			let 英雄2我方残血增伤 = parseFloat(document.getElementById("英雄2我方残血增伤").value);
-			let 英雄2生命偷取 = parseFloat(document.getElementById("英雄2生命偷取").value);
-			let 英雄2血族吸血 = parseFloat(document.getElementById("英雄2血族吸血").value);
-			let 英雄2生命回复 = parseFloat(document.getElementById("英雄2生命回复").value);
-			let 英雄2攻击速度 = parseFloat(document.getElementById("英雄2攻击速度").value);
-			let 英雄2暴击率 = parseFloat(document.getElementById("英雄2暴击率").value);
-			let 英雄2暴击伤害 = parseFloat(document.getElementById("英雄2暴击伤害").value);
-			let 英雄2三项 = parseFloat(document.getElementById("英雄2三项").value);
-			let 英雄2破刃 = parseFloat(document.getElementById("英雄2破刃").value);
-			let 英雄2斩舰= parseFloat(document.getElementById("英雄2斩舰").value);
-			let 英雄2削蓝 = parseFloat(document.getElementById("英雄2削蓝").value);
-			let 英雄2妖精 = parseFloat(document.getElementById("英雄2妖精").value);
-			let 英雄2凤凰 = parseFloat(document.getElementById("英雄2凤凰").value);
-			let result = 英雄1生命值+英雄2生命值;
-			let 英雄1暴击乘区 = 1-英雄1暴击率+英雄1暴击率*英雄1暴击伤害
-			let 英雄2暴击乘区 = 1-英雄2暴击率+英雄2暴击率*英雄2暴击伤害
-			let 英雄1实际抗性 =(英雄1抗性-英雄2固定穿透)*(1-英雄2百分比穿透)
-			let 英雄2实际抗性 =(英雄2抗性-英雄1固定穿透)*(1-英雄1百分比穿透)
-			let 英雄1承伤比率 = 100/(100+英雄1实际抗性)
-			let 英雄2承伤比率 = 100/(100+英雄2实际抗性)
-			let 英雄1普攻伤害 = 英雄1攻击力*英雄1暴击乘区*英雄2承伤比率*(1+英雄1常驻增伤)
-			let 英雄2普攻伤害 = 英雄2攻击力*英雄2暴击乘区*英雄1承伤比率*(1+英雄1常驻增伤)
-			document.getElementById("result").innerHTML= 
-                  `英雄1生命值+英雄2生命值：${result}<br>英雄2普攻伤害：${英雄2普攻伤害}`;
-		}
-	</script>
-	<p>1.对于平a是ap并且出了手指的英雄，应该把平a向日葵的伤害填入攻击力一栏</p>
-	<p>2.增伤装备可以填入增伤天赋里</p>
-	<p>3.连弩类道具填写2暴击伤害即可</p>
-	<p>4.英雄1的减伤可以通过对英雄2添加一个负的常驻增伤实现<br><br><br><br>
-	<span id="result"></span>
-	
-</body>
 
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">300</span>
+    <div class="brand-text">
+      <h1>装备属性计算器</h1>
+      <span class="ver">满级 18 级 · 木桩可调</span>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button data-view="calc" class="active">计算器</button>
+    <button data-view="duel">斗蛐蛐</button>
+    <button data-view="items">装备图鉴</button>
+    <button data-view="bili">B站评论</button>
+    <button data-view="about">说明</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ==================== 计算器 ==================== -->
+  <section class="view active" id="view-calc">
+    <div class="result-bar" id="resultBar"></div>
+
+    <div class="calc-grid">
+      <div class="col-left">
+        <div class="card">
+          <div class="card-head">
+            <h2>人物属性</h2>
+            <button class="ghost" data-act="reset-hero">恢复默认</button>
+          </div>
+          <div class="chips" id="heroChips"></div>
+          <div class="form-grid" id="heroForm"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2>木桩</h2>
+            <button class="ghost" data-act="reset-dummy">恢复默认</button>
+          </div>
+          <div class="form-grid" id="dummyForm"></div>
+          <p class="hint">木桩只影响承伤率与伤害结果。要把木桩变成敌对角色，请到「斗蛐蛐」。</p>
+        </div>
+      </div>
+
+      <div class="col-right">
+        <div class="card">
+          <div class="card-head">
+            <h2>装备选择</h2>
+            <div class="pick-summary" id="pickSummary"></div>
+          </div>
+          <div class="toolbar">
+            <input id="itemSearch" type="search" placeholder="搜索装备名">
+            <div class="cat-chips" id="catChips"></div>
+          </div>
+          <div class="item-grid" id="itemGrid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 斗蛐蛐 ==================== -->
+  <section class="view" id="view-duel">
+    <div class="duel-grid">
+      <div class="card">
+        <div class="card-head">
+          <h2>我方</h2>
+          <span class="tag">与计算器页同步</span>
+        </div>
+        <div class="chips" id="duelChipsA"></div>
+        <div class="form-grid compact" id="duelFormA"></div>
+        <div class="sub-head"><h3>我方装备</h3><span id="duelPickA" class="muted"></span></div>
+        <div class="item-grid small" id="duelItemsA"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2>敌方</h2>
+          <button class="ghost" data-act="enemy-from-dummy">用木桩数值初始化</button>
+        </div>
+        <div class="chips" id="duelChipsB"></div>
+        <div class="form-grid compact" id="duelFormB"></div>
+        <div class="sub-head"><h3>敌方装备</h3><span id="duelPickB" class="muted"></span></div>
+        <div class="item-grid small" id="duelItemsB"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2>模拟结果</h2>
+        <div class="duel-head-modes">
+          <span class="lbl">特效口径</span>
+          <div class="fx-modes" id="duelFxModes"></div>
+          <button class="primary" data-act="run-duel">开始模拟</button>
+        </div>
+      </div>
+      <div id="duelResult"></div>
+    </div>
+  </section>
+
+  <!-- ==================== 装备图鉴 ==================== -->
+  <section class="view" id="view-items">
+    <div class="card">
+      <div class="card-head">
+        <h2>装备图鉴</h2>
+        <span class="muted" id="itemCount"></span>
+      </div>
+      <div class="toolbar wrap" id="devBar" hidden>
+        <button class="primary" data-act="new-item">新增装备</button>
+        <button class="ghost" data-act="bulk-import">批量导入</button>
+        <button class="ghost" data-act="export-items-js">导出 items.js</button>
+        <button class="ghost danger" data-act="drop-draft">还原为文件版本</button>
+      </div>
+      <div class="toolbar wrap">
+        <input id="galSearch" type="search" placeholder="搜索装备名或属性">
+        <div class="cat-chips" id="galCats"></div>
+      </div>
+      <p class="hint">这里列出全部装备的属性与特效，供对照查询；在「计算器」和「斗蛐蛐」里勾选即可参与计算。
+        分类由属性自动判定，一件装备可以同时出现在多个分类下（带特效的会进「特效」，防御加成也算）。</p>
+      <div class="table-wrap">
+        <table class="data-table" id="itemTable"></table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== B站评论 ==================== -->
+  <section class="view" id="view-bili">
+    <div class="card">
+      <div class="card-head">
+        <h2>相关视频</h2>
+        <span class="muted" id="biliSync"></span>
+      </div>
+      <div id="biliVideo"></div>
+    </div>
+
+    <div class="card" id="biliCommentCard">
+      <div class="card-head">
+        <h2>视频评论区</h2>
+        <div class="cat-chips" id="biliTabs">
+          <button class="active" data-sort="hot">热门</button>
+          <button data-sort="latest">最新</button>
+        </div>
+      </div>
+      <div id="biliComments"></div>
+      <p class="hint">这里只是评论快照，由仓库里的 GitHub Action 定时抓取（热门按点赞/回复热度取前若干条）。想看全部评论、回复或发评论，点上方按钮去 B站。</p>
+    </div>
+  </section>
+
+  <!-- ==================== 说明 ==================== -->
+  <section class="view" id="view-about">
+    <div class="card about">
+      <p class="doc-p">
+        「计算器」看一套配置的输出与生存，「斗蛐蛐」让两套配置直接对打。界面上任何数字都能改，改完立即重算。
+      </p>
+
+      <h2>伤害</h2>
+      <ul class="doc-list">
+        <li>满级值 = 基础值 + 成长值 ×（等级 − 1），默认 18 级。</li>
+        <li>攻速 = 基础攻速 ×（1 + 基础攻速%）×（1 + 成长攻速 ×（等级−1）+ 装备攻速%），上限 <b>2.5</b>。
+            「+20% 基础攻速」这类词条放大的是<b>基础攻速本身</b>（0.69 → 0.828），和「攻速加成 +20%」不是一回事。</li>
+        <li>暴击因子 = 1 − 暴击率 + 暴击率 × 暴击伤害，暴击率上限 <b>100%</b>。</li>
+        <li>承伤率 = 100 ÷（100 + 抗性）；实际抗性 =（抗性 − 固定穿透 − 削抗）×（1 − 百分比穿透 − 削抗%），先固定后百分比。</li>
+        <li><b>削抗与穿透等价</b>：装备上「降低敌人 30 护甲」这类写法直接当成额外穿透算，因为对单体输出而言两者都是把目标抗性往下压。</li>
+        <li><b>攻击力、法强、护甲、法抗最低为 0</b>：穿透最多把护甲 / 法抗穿到 0，不会出现负抗性放大伤害。</li>
+        <li>命中率 = 我方命中 ÷（敌方闪避 + 100），上限 100%；未命中的部分伤害为 0。</li>
+        <li>增伤与减伤同时存在时<b>乘算</b>：伤害 ×（1 + 增伤）×（1 − 减伤）。</li>
+        <li><b>普攻必中</b>（死棘之枪 / 转义词典）把普攻的命中率强制为 100%，特效不受影响。</li>
+        <li><b>普攻倍率</b>（诸葛连弩「33% 概率连击 2 次」）按等效 <b>×1.33</b> 打在普攻这一项上，连击那一下同样吃暴击。</li>
+        <li><b>概率无视护甲</b>（物理学圣剑）按<b>期望承伤率</b>折算：50% 概率无视 → 承伤率 = 0.5 × 正常承伤 + 0.5 × 100%。</li>
+        <li><b>物理转法术</b>（转义词典）把「要乘物理承伤率的伤害」按比例拆两段：
+            留下的 70% 走护甲、转走的 30% 走<b>法术抗性</b>（并使用<b>法术穿透</b>），
+            所以承伤率 = 0.7 × 物理承伤 + 0.3 × 法术承伤；普攻与物理伤害特效都按这个拆。
+            主动期间比例变成 70%，但在「不含特效」与「平均」两档仍按 30% 计（主动不折算）。</li>
+        <li>DPS = 攻速 × 暴击因子 × 命中率 × 增伤 × 减伤 × Σ（每条普攻成分过对应抗性后的每一下伤害）。默认普攻是 1.0 攻击力的物理伤害，此时就等同于「攻击力 × 攻速 × 暴击因子 × 承伤率 × 命中率 × 增伤 × 减伤」。</li>
+        <li><b>无相之力</b>：每点提供 1 攻击力或 1.6 法强，默认算作攻击力；当装备提供的法强高于装备提供的攻击力时，全部转为法强。它直接并入面板的攻击力 / 法强，不单独显示。</li>
+      </ul>
+
+      <h2>普攻构成</h2>
+      <p class="doc-p">
+        普通攻击默认按 <b>1.0 攻击力的物理伤害</b> 计算。有的英雄普攻是魔法伤害、混加成或带固定值，就在「人物属性」卡片下面的「普攻构成」里拆条填：
+        每条 = 伤害类型（物理 / 魔法 / 真实）+ 攻击力系数 + 法强系数 + 固定值 + 每级固定值，多条直接相加。
+        比如普攻是 <b>0.4ad + 0.2ap + 2×等级</b> 的魔法伤害，就是一条「魔法、×攻击力 0.4、×法强 0.2、每级 2」；
+        每次普攻额外附带固定真实伤害，再加一条「真实、固定 30」；如果是「每级 +2 真实伤害」，就填「真实、每级 2」。
+        每条按自己的伤害类型吃护甲 / 法抗（物理吃物穿、魔法吃法穿，<b>真实伤害两种抗性都不吃</b>），再一起乘攻速、暴击、命中率、增伤与减伤。
+      </p>
+
+      <h2>肉度</h2>
+      <p class="doc-p">
+        肉度 =（生命值 + 每秒回血）÷ 自身承伤率 + 可吸血 DPS × 吸血比例，按自身护甲、法抗各算一次。
+        承伤率里已含减伤、受普攻减伤与闪避（闪避按「命中 100 的对手」折算，肉度这条线假定<b>挨的是普攻</b>）。
+        回血填的是每 5 秒的数值，程序内部除以 5；「生命回复提高」只放大自然回血，不放大吸血。
+      </p>
+
+      <h2>重伤</h2>
+      <p class="doc-p">
+        重伤按比例削减对方的回复（自然回血与吸血都算）：<b>实际减疗 = 重伤%</b>，一律永久生效，不做覆盖率折算。
+        多件装备的重伤不叠加，取其中最高的一件。
+      </p>
+
+      <h2>装备特效与特效口径</h2>
+      <p class="doc-p">
+        带特效的装备按三档口径统计，三档的 <b>DPS 与肉度</b> 会在计算器的「特效口径」处并列列出；
+        顶部按钮只是切换当前用哪一档看明细（斗蛐蛐也按当前这一档模拟）：
+      </p>
+      <ul class="doc-list">
+        <li><b>不含特效</b>：只看纯面板普攻，特效与主动加成一律不计。</li>
+        <li><b>爆发 1s</b>：把每条特效一轮的完整伤害塞进 1 秒内，<b>主动加成在这 1 秒里全额生效</b>，看开团瞬间能打出多少。</li>
+        <li><b>平均</b>：按冷却、持续与叠层摊到每秒，看长期站桩。</li>
+      </ul>
+      <p class="doc-p">
+        特效自己的乘数只有三项：<b>攻击力（含系数）/ 对应抗性的承伤率 / 触发频率</b>。
+        物理吃护甲与物穿（含无视护甲、物理转法术），魔法吃法抗与法穿，真实伤害不过抗性；
+        触发频率有冷却就走冷却，没填冷却才按攻速；<b>默认不吃暴击</b>（逐条勾了才乘暴击因子）。
+      </p>
+      <p class="doc-p">
+        例：天锁斩月的斩击 =（150 + 25% 攻击力）× 护甲承伤率 ÷ 冷却，再乘命中率、增伤、减伤；
+        造成物理伤害、可吸血，但不吃攻速、也不暴击（除非显式勾选）。
+        <b>命中率 / 增伤 / 减伤是所有伤害共有的修正</b>，特效和普攻一样要过。
+      </p>
+      <p class="doc-p">
+        肉度之所以也有三档，是因为<b>吃吸血的特效</b>会按同一口径计入吸血回复：特效伤害越高，吸回来的越多。
+        如果一件装备的特效都不吃吸血，三档肉度就是同一个数。
+      </p>
+
+      <h2>特效的属性加成</h2>
+      <p class="doc-p">
+        有些特效不打伤害，而是在若干秒内给自己加属性（<b>攻速 / 攻击力 / 法强 / 护甲 / 法抗 / 护盾 / 减伤 / 吸血 / 回血 / 无相之力</b>），
+        或者给对方上削弱（<b>削甲 / 削抗 / 减攻速</b>）。这类加成分成两种，<b>算法不同</b>：
+      </p>
+      <ul class="doc-list">
+        <li><b>被动加成</b>：按覆盖率折成平均值，把整份属性重算一遍。
+            <b>覆盖率 = min(100%, 持续 × 触发频率)</b>，触发频率 = 冷却填了就是 1÷冷却、留 0 就按攻速；<b>持续留 0 = 常驻</b>。
+            例：「每 25 秒削 20% 法抗、持续 5 秒」→ 覆盖率 20%，等效 −4% 法抗。</li>
+        <li><b>主动加成</b>：<b>不折算平均值</b>。留着开团用的东西摊平均没有意义，所以只在<b>爆发 1s</b> 口径里全额生效，
+            「不含特效」与「平均」两档都按没有它算。
+            例：NICE杖「+100 法抗 5 秒 / 冷却 75 秒」→ 爆发档 +100 法抗，平均档 +0。</li>
+      </ul>
+      <p class="doc-p">
+        「+10% 生命上限的护盾」「+5% 生命上限的回血」这类按生命比例给的加成也能填（额外生命 / 回血%），程序用最终生命值去算。
+        减攻速只在斗蛐蛐里生效（计算器没有对手攻速这一说）；削甲 / 削抗两边都生效。
+        <b>对敌削弱也写在同一条加成里</b>：填 <code>mrShred</code> 是把对方的法抗往下压，填 <code>mr</code> 负值则是把自己的法抗往下压
+        —— 迷雾之灯那种「敌我双方 −40 法抗」就是一条特效里同时填这两个键。
+      </p>
+      <p class="doc-p">
+        限时重伤（如「持续 4.5 秒 75% 重伤」）也走同一套折算，折算后与常驻重伤取最高。
+      </p>
+
+      <h2>只有斗蛐蛐才讲得通的机制</h2>
+      <ul class="doc-list">
+        <li><b>降低对方攻速</b>：只压对手的攻速，计算器页没有对手攻速这一说。</li>
+        <li><b>受到普攻伤害降低</b>（光之护封剑）：只减普攻，不减特效伤害。</li>
+        <li><b>反击</b>（反震盔甲）：对方承受「他自己 DPS 的 30%」，真实伤害、不过抗性。</li>
+        <li><b>迷雾</b>（迷雾之灯）：主动 4.5s / 冷却 25s。期间双方命中归零（按覆盖率 18% 折算成输出打折），
+            <b>双方 −40 法抗按「主动加成」算</b>——只有爆发档全额生效，平均档按没有算。原文的「+1000 闪避 / −100 命中 / −40% 物理伤害」按约定不计。</li>
+        <li><b>残血加成</b>（龙鳞明光甲）：计算器按 1.5% 算，斗蛐蛐按两段平均 2% 算。</li>
+      </ul>
+
+      <h2>没建模的机制</h2>
+      <p class="doc-p">
+        还有极少数没法用「属性 + 覆盖率」表达的机制（伤害暂缓、法力值等）。这些一律抄进装备的<b>特殊说明</b>里，
+        在图鉴中显示为「未计入：…」，只做提示、不参与任何计算。
+      </p>
+      <p class="doc-p">
+        另有几项是<b>约定不计</b>的（移动教会「每段 -25、最多 -40%」、血族亲王「12% 减免逐秒转增伤」、
+        咲夜的怀表「已损生命 2.5% 回血」），它们在图鉴里显示为「注：…」，同样不参与计算。
+      </p>
+
+      <h2>斗蛐蛐</h2>
+      <p class="doc-p">
+        双方按恒定速率互相扣血：净掉血 = 对方 DPS − 自己回复 × 对方重伤的削弱。谁先被扣完谁输，并给出胜方剩余血量。
+        用的是连续解析解，不含技能循环与施法时间。
+      </p>
+
+      <h2>基准值</h2>
+      <p class="doc-p">
+        基准 = 当前等级、当前木桩、不穿任何装备时的结果。改等级或木桩后基准会同步变化，
+        所以「相对基准」始终是同一条件下的装备增益。
+      </p>
+  </section>
+
+</main>
+
+<!-- 通用弹层 -->
+<div class="modal-mask" id="modalMask" hidden>
+  <div class="modal" id="modalBox"></div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<!-- ============================================================
+     脚本按依赖顺序加载（纯静态，不用打包工具）：
+       基础层  data（字段/默认值） → engine（纯计算） → items（装备数据） → core（命名空间/状态）
+       界面层  ui/form 表单 · ui/items 装备卡片 · ui/result 结果条
+       页面层  pages/calc · pages/duel · pages/gallery
+       后台层  admin/editor · admin/import · admin/export（?dev=1 才用得到）
+       入口    main（视图切换 + 事件委托）
+     各模块都挂在 window.H300 上，互相只通过这个命名空间调用。
+     ============================================================ -->
+<script src="assets/js/data.js"></script>
+<script src="assets/js/engine.js"></script>
+<script src="data/items.js"></script>
+<script src="assets/js/core.js"></script>
+
+<script src="assets/js/ui/form.js"></script>
+<script src="assets/js/ui/items.js"></script>
+<script src="assets/js/ui/result.js"></script>
+
+<script src="assets/js/pages/calc.js"></script>
+<script src="assets/js/pages/duel.js"></script>
+<script src="assets/js/pages/gallery.js"></script>
+
+<script src="assets/js/admin/editor.js"></script>
+<script src="assets/js/admin/import.js"></script>
+<script src="assets/js/admin/export.js"></script>
+
+<script src="assets/js/bili.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
 </html>

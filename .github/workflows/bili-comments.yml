@@ -1,0 +1,43 @@
+name: 同步B站评论
+
+# 每 6 小时抓一次，也可以在 Actions 页面手动 Run workflow。
+# 抓到的结果写进 data/bili-comments.json 并自动提交，页面直接读这个文件。
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bili-comments
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 抓取评论
+        env:
+          # 优先用仓库变量；没配就用 bili.config.json 里的 bvid
+          BILI_BVID: ${{ vars.BILI_BVID }}
+        run: python tools/fetch_bili_comments.py
+
+      - name: 提交变更
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/bili-comments.json
+          if git diff --staged --quiet; then
+            echo "内容没变化，跳过提交"
+          else
+            git commit -m "chore: 同步B站评论快照"
+            git push
+          fi
