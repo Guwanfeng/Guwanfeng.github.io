@@ -122,7 +122,7 @@ window.HeroBili = (function () {
     if (!list.length) {
       var hasVideo = !!(data && data.video);
       rootList.innerHTML = hasVideo
-        ? '<p class="empty">这个视频暂时没抓到评论（可能已关闭评论区，或该视频还没人评论）。</p>'
+        ? '<p class="empty">' + (data.note ? esc(data.note) : '这个视频暂时没抓到评论（可能已关闭评论区，或该视频还没人评论）。') + '</p>'
         : '<p class="empty">评论快照还没就位。数据由 GitHub Action 定时抓取，配好 BV 号后跑一次就有。</p>';
       return;
     }

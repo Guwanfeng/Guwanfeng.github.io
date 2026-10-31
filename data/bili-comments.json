@@ -1,6 +1,35 @@
 {
-  "updated": "",
-  "video": null,
-  "hot": [],
-  "latest": []
+  "updated": "2026-10-31T14:57:07+08:00",
+  "note": "未登录抓取，B站只放行每种排序 3 条",
+  "video": {
+    "bvid": "BV1cixC6ZEuC",
+    "aid": 117534195976595,
+    "title": "【300英雄】if竞技场远程右键计算器",
+    "owner": "狂三中包F7",
+    "cover": "https://i0.hdslb.com/bfs/archive/b78db7cb36d7efdae674116424354abfb5e0b40d.jpg",
+    "url": "https://www.bilibili.com/video/BV1cixC6ZEuC",
+    "view": 1,
+    "danmaku": 0,
+    "pubdate": 1793429665
+  },
+  "hot": [
+    {
+      "user": "狂三中包F7",
+      "avatar": "https://i0.hdslb.com/bfs/face/bd1dbcfe2b7aea08353352a74a353a262523fea6.jpg",
+      "content": "https://guwanfeng.github.io/\n刚上线，bug应该不少，不过有些平均伤害/肉度=无主动的平均伤害/肉度，那个是因为ai偷懒了所以不算bug，凑合用吧",
+      "ctime": 1793429830,
+      "like": 0,
+      "rcount": 0
+    }
+  ],
+  "latest": [
+    {
+      "user": "狂三中包F7",
+      "avatar": "https://i0.hdslb.com/bfs/face/bd1dbcfe2b7aea08353352a74a353a262523fea6.jpg",
+      "content": "https://guwanfeng.github.io/\n刚上线，bug应该不少，不过有些平均伤害/肉度=无主动的平均伤害/肉度，那个是因为ai偷懒了所以不算bug，凑合用吧",
+      "ctime": 1793429830,
+      "like": 0,
+      "rcount": 0
+    }
+  ]
 }

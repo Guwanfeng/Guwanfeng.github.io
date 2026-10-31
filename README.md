@@ -117,4 +117,5 @@ python -m http.server 8899 --bind 127.0.0.1
 - `.nojekyll` 必须一起提交，否则以下划线开头的文件/目录会被 Jekyll 忽略。
 - 仓库里原来的 `index.html` 会被覆盖；想保留旧版就先另存一份。
 
-B 站评论要在 Actions 里能跑起来，需要 `bili.config.json` 里填上 `bvid`（或在仓库 Variables 里加 `BILI_BVID`）。
+B 站评论要在 Actions 里能跑起来，需要 `bili.config.json` 里填上 `bvid`（或在仓库 Variables 里加 `BILI_BVID`），
+当前填的是 `BV1cixC6ZEuC`。视频还没人评论时快照照样会写（只是评论列表为空），只有「视频有评论却一条都没抓到」才会判定为风控并保留旧快照。

@@ -237,10 +237,16 @@ def main() -> int:
         except Exception as exc:
             print("  老接口失败：{}".format(exc), file=sys.stderr)
 
+    total_reply = stat.get("reply") or 0
     if not hot and not latest:
-        return fail("一条评论都没取到（可能关闭了评论区，或请求被风控）")
+        if total_reply > 0:
+            # 视频有评论却一条都没抓到 → 大概率是风控，保留上一次快照
+            return fail("视频有 {} 条评论但一条都没取到（可能被风控）".format(total_reply))
+        # 视频本来就还没人评论 → 不算失败，照样写快照（至少把视频信息落下去）
+        print("  视频还没有评论（reply=0），写入空的评论列表")
+        note = "视频暂无评论，有人评论后下次同步会自动出现"
 
-    if not os.environ.get("BILI_SESSDATA") and max(len(hot), len(latest)) <= 3:
+    if not note and not os.environ.get("BILI_SESSDATA") and max(len(hot), len(latest)) <= 3:
         note = "未登录抓取，B站只放行每种排序 3 条"
 
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
